@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Clima en RD</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Selecciona una ciudad/provincia</ion-label>
+    <ion-select [(ngModel)]="selectedProvince" (ionChange)="fetchWeather()">
+      <ion-select-option *ngFor="let province of provinces">{{ province }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div class="weather-card" *ngIf="weatherData">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Clima en {{ weatherData.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Temperatura: {{ weatherData.main.temp }} °C</p>
+        <p>Humedad: {{ weatherData.main.humidity }}%</p>
+        <p>Descripción: {{ weatherData.weather[0].description }}</p>
+        <img src="https://openweathermap.org/img/w/{{ weatherData.weather[0].icon }}.png" alt="Icono de clima" />
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="forecast-card" *ngIf="forecastData">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Pronóstico para los próximos días</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor="let forecast of forecastData.list.slice(0, 5)">
+            <p>{{ forecast.dt_txt }} - {{ forecast.main.temp }} °C</p>
+            <img src="https://openweathermap.org/img/w/{{ forecast.weather[0].icon }}.png" alt="Icono de clima" />
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

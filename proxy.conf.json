@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://n.com.do",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Últimas noticias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="logo-card">
+    <img [src]="logoUrl" alt="Logo De Último Minuto" class="logo-image">
+  </ion-card>
+
+  <ion-list>
+    <ion-item *ngFor="let post of posts">
+      <ion-card class="news-card">
+        <ion-thumbnail *ngIf="post._embedded?.['wp:featuredmedia']?.[0]?.media_details?.sizes?.medium?.source_url">
+          <img [src]="post._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url" alt="Miniatura de noticia">
+        </ion-thumbnail>
+
+        <ion-card-header>
+          <ion-card-title [innerHTML]="post?.title?.rendered || 'Sin título'"></ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p [innerHTML]="post?.excerpt?.rendered || 'Sin resumen'"></p>
+        </ion-card-content>
+
+        <ion-button expand="block" fill="solid" [href]="post?.link" target="_blank" class="news-button">
+          Leer Noticia
+        </ion-button>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

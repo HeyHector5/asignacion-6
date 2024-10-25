@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  ion-card {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .result-box {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+  }
+  
+  .result-text {
+    font-size: 1.2em;
+  }
+  

@@ -1,0 +1,31 @@
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .about-card {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  
+  .about-title {
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+  
+  .about-detail {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }

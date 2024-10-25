@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Asignación 6</string>
+    <string name="title_activity_main">Asignación 6</string>
+    <string name="package_name">com.asignacion.asignacion6</string>
+    <string name="custom_url_scheme">com.asignacion.asignacion6</string>
+</resources>

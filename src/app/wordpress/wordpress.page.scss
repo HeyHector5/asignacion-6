@@ -1,0 +1,50 @@
+.logo-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .logo-image {
+    width: 150px;
+    height: auto;
+  }
+  
+  .news-card {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  ion-thumbnail {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  ion-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  ion-card-content {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .news-button {
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    --background: #3880ff;
+    --border-radius: 0;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .logo-image {
+    width: 450px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
